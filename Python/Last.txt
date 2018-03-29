@@ -1,0 +1,1 @@
+Make a function that takes a filename as a parameter and returns a list of words that are contained in it taking care that multiple occurring words are given only once

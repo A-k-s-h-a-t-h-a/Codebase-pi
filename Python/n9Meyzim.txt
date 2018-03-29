@@ -1,0 +1,4 @@
+req1=urllib.request.Request(L1[1],data=None,headers={'User-Agent':'Mozilla/5.0(Macintosh;Intel Mac OS X10_9_3)AppleWebKit/537.36(KHTML,like Gecko)Chrome/35.0.1916.47 Safari/537.'})
+file_handle=urllib.request.urlopen(req1)
+text=file_handle.read()
+soup=BeautifulSoup(text,"html.parser")

@@ -1,0 +1,23 @@
+con.execute('CREATE TABLE PROJECT4(domain char(32),url char(250),word char(90),density float)')
+
+cursor=con.cursor()
+cursor.execute('''insert into PROJECT4(domain,url,word,density) values(?,?,?,?)''',(L1[0],L1[1],L1[2],D2[L1[2]]))
+cursor.execute('''insert into PROJECT4(domain,url,word,density) values(?,?,?,?)''',(L1[0],L1[1],L1[3],D2[L1[3]]))
+cursor.execute('''insert into PROJECT4(domain,url,word,density) values(?,?,?,?)''',(L1[0],L1[1],L1[4],D2[L1[4]]))
+cursor.execute('''insert into PROJECT4(domain,url,word,density) values(?,?,?,?)''',(L2[0],L2[1],L2[2],D3[L2[2]]))
+cursor.execute('''insert into PROJECT4(domain,url,word,density) values(?,?,?,?)''',(L2[0],L2[1],L2[2],D3[L2[3]]))
+cursor.execute('''insert into PROJECT4(domain,url,word,density) values(?,?,?,?)''',(L2[0],L2[1],L2[2],D3[L2[4]]))
+
+print("Getting the data base and printing it in a exel sheet")
+curl=cursor.execute('''select * from PROJECT4 where domain=?''',(L1[0],))
+L7=[]
+for row in curl:
+    L7.append(row)
+print(L7)
+
+
+curl2=cursor.execute('''select * from PROJECT4 where domain=?''',(L2[0],))
+L8=[]
+for row in curl2:
+    L8.append(row)
+print(L8)
